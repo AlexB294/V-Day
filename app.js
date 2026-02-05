@@ -24,7 +24,6 @@ const funnyLines = [
   "Yack, nu ne place butonul asta🤮"
 ];
 
-// text random, rating FIX 10/10
 const pitbullTexts = [
   "MR. WORLDWIDE APPROVED ✅🌍",
   "DALE/10 🔥",
@@ -33,7 +32,6 @@ const pitbullTexts = [
   "Pitbull said: YES 😤"
 ];
 
-// ❤️ Hearts animation
 function popHearts(count = 30) {
   for (let i = 0; i < count; i++) {
     const h = document.createElement("div");
@@ -47,7 +45,6 @@ function popHearts(count = 30) {
   }
 }
 
-// 🎵 MUSIC – fade in, porneste DOAR dupa Yes
 function startMusic() {
   if (!music) return;
   try { music.currentTime = 0; } catch (_) {}
@@ -62,7 +59,6 @@ function startMusic() {
   }, 90);
 }
 
-// 😈 No button fuge + YES crește
 function runAway() {
   noCount++;
 
@@ -82,19 +78,15 @@ function runAway() {
   yes.style.transform = `scale(${yesScale})`;
 }
 
-// 💖 DA — final funny cu 1 poza Pitbull (centrata) + PITBULL RATING 10/10
 function accept() {
   startMusic();
   popHearts(90);
 
   yes.disabled = true;
   no.disabled = true;
-  no.style.display = "none"; // optional: dispare complet dupa DA
+  no.style.display = "none";
 
-  const randomText =
-    pitbullTexts[Math.floor(Math.random() * pitbullTexts.length)];
-
-  // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ 10 STELE
+  const randomText = pitbullTexts[Math.floor(Math.random() * pitbullTexts.length)];
   const stars = "⭐".repeat(10);
 
   btns.innerHTML = `
@@ -111,9 +103,9 @@ function accept() {
         </div>
       </div>
 
-      <!-- ✅ O SINGURA POZA, CENTRATA (foloseste CSS .gallery.single) -->
-      <div class="gallery single">
-        <div class="pic">
+      <!-- ✅ CENTRARE GARANTATA (inline flex, ignoră CSS-ul vechi) -->
+      <div style="display:flex; justify-content:center; width:100%; margin-top:14px;">
+        <div class="pic" style="width:260px; max-width:80%; margin:0 auto;">
           <img src="pitbull1.jpg" alt="Pitbull"
                onerror="this.closest('.pic').style.display='none'">
         </div>
