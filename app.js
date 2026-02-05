@@ -82,13 +82,14 @@ function runAway() {
   yes.style.transform = `scale(${yesScale})`;
 }
 
-// 💖 DA — final funny cu poze + PITBULL RATING 10/10
+// 💖 DA — final funny cu 1 poza Pitbull (centrata) + PITBULL RATING 10/10
 function accept() {
   startMusic();
   popHearts(90);
 
   yes.disabled = true;
   no.disabled = true;
+  no.style.display = "none"; // optional: dispare complet dupa DA
 
   const randomText =
     pitbullTexts[Math.floor(Math.random() * pitbullTexts.length)];
@@ -110,11 +111,12 @@ function accept() {
         </div>
       </div>
 
-      <div class="gallery">
-        <div class="pic"><img src="pitbull1.jpg" onerror="this.closest('.pic').style.display='none'"></div>
-        <div class="pic"><img src="pitbull2.jpg" onerror="this.closest('.pic').style.display='none'"></div>
-        <div class="pic"><img src="me.jpg" onerror="this.closest('.pic').style.display='none'"></div>
-        <div class="pic"><img src="us.jpg" onerror="this.closest('.pic').style.display='none'"></div>
+      <!-- ✅ O SINGURA POZA, CENTRATA (foloseste CSS .gallery.single) -->
+      <div class="gallery single">
+        <div class="pic">
+          <img src="pitbull1.jpg" alt="Pitbull"
+               onerror="this.closest('.pic').style.display='none'">
+        </div>
       </div>
 
       <p style="margin:14px 0 0; font-size:18px;">I know you want me 😏💃🕺</p>
