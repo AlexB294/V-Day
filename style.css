@@ -215,12 +215,16 @@ h1{
   display:block;
 }
 
-/* 🔥 SINGLE PITBULL PHOTO – CENTERED */
+/* 🔥 PITBULL PHOTO – PERFECT CENTER */
 .gallery.single{
-  display:flex;
-  justify-content:center;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .gallery.single .pic{
-  width:min(260px, 80%);
+  width: 260px;
+  max-width: 80%;
+  margin: 0 auto;   /* 🔑 CHEIA */
 }
+
