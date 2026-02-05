@@ -174,3 +174,10 @@ h1{
   border:1px solid rgba(255,255,255,.26);
   font-weight:700;
 }
+/* Permite scroll in ecranul final (mai ales pe iPhone) */
+.card{
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
